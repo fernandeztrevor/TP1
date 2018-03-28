@@ -6,7 +6,7 @@
 
 int op1;
 int op2;
-int resultado;
+float resultado;
 int ingresado;
 
 int main()
@@ -94,7 +94,7 @@ int sumar ()
      //scanf("%d", numero1);
     //scanf("%d", numero2);
     resultado=op1+op2;
-    printf("\nEl resultado de la suma es: %d\n", resultado);
+    printf("\nEl resultado de la suma es: %.2f\n", resultado);
 
     return sumar;
 }
@@ -104,7 +104,7 @@ int restar()
     //scanf("%d", numero1);
     //scanf("%d", numero2);
     resultado=op1-op2;
-    printf("\nEl resultado de la resta es: %d\n", resultado);
+    printf("\nEl resultado de la resta es: %.2f\n", resultado);
 
     return restar;
 }
@@ -112,14 +112,15 @@ int dividir()
 {
      //scanf("%f", numero1);
     //scanf("%f", numero2);
-    while(op2==0);
+
+    while(op2==0)
     {
         printf("Error, el operador 2 no puede ser 0, reingrese: \n");
         scanf("%d", &op2);
     }
     resultado=(float)op1/op2;
 
-    printf("\nEl resultado de la división es: %f\n", resultado);
+    printf("\nEl resultado de la división es: %.2f\n", resultado);
 
     return dividir;
 }
@@ -127,9 +128,8 @@ int multiplicar()
 {
     //scanf("%d", numero1);
     //scanf("%d", numero2);
-    resultado = op1 * op2;
-
-    printf("\nEl resultado de la multiplicación es: %d\n", resultado);
+    resultado=op1*op2;
+    printf("\nEl resultado de la multiplicación es: %.2f\n", resultado);
 
     return multiplicar;
 }
