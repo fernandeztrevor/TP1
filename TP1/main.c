@@ -63,8 +63,14 @@ while(seguir=='s')
                 }
                 break;
             case 7:
+                {
+                    resultado=factorial();
+                }
                 break;
             case 8:
+                {
+                    resultado=todos();
+                }
                 break;
             case 9:
                 seguir = 'n';
@@ -79,16 +85,16 @@ while(seguir=='s')
 int ingreso()
 {
     int ingreso;
+    int validar_num (char ingreso[50]);
+    int validacion=0;
+
     printf("Ingrese un valor: \n");
     scanf("%d", &ingreso);
 
+
     return ingreso;
 };
-/*char operacion()
-{
-    char operacion;
-    operacion=getche();
-}*/
+
 int sumar ()
 {
      //scanf("%d", numero1);
@@ -134,3 +140,52 @@ int multiplicar()
     return multiplicar;
 }
 
+int factorial()
+{
+int fact=1;
+int i;
+
+for (i=1;i<=op1;i++)
+{
+    fact=fact*i;
+}
+printf("El resultado corresponde al primer número ingresado");
+printf("\nEl factorial del numero es: %d\n", fact);
+
+return factorial;
+}
+
+int todos()
+{
+   resultado=op1+op2;
+    printf("\nEl resultado de la suma es: %.2f\n", resultado);
+
+   resultado=op1-op2;
+    printf("\nEl resultado de la resta es: %.2f\n", resultado);
+
+    while(op2==0)
+    {
+        printf("Error, el operador 2 no puede ser 0, reingrese: \n");
+        scanf("%d", &op2);
+    }
+    resultado=(float)op1/op2;
+
+    printf("\nEl resultado de la división es: %.2f\n", resultado);
+
+    resultado=op1*op2;
+    printf("\nEl resultado de la multiplicación es: %.2f\n", resultado);
+
+
+    int fact=1;
+    int i;
+
+    for (i=1;i<=op1;i++)
+{
+    fact=fact*i;
+}
+printf("El resultado corresponde al primer número ingresado");
+printf("\nEl factorial del numero es: %d\n", fact);
+
+return todos;
+
+}
