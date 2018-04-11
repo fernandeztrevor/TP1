@@ -1,6 +1,17 @@
 # depslib dependency file v1.0
-1522242179 source:c:\users\tfernandez_mecon\desktop\tp1\main.c
+1523473997 source:c:\users\tfernandez_mecon\desktop\tp1\main.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
+	<float.h>
+	"funcion.h"
+
+1523473979 c:\users\tfernandez_mecon\desktop\tp1\funcion.h
+
+1523474481 source:c:\users\tfernandez_mecon\desktop\tp1\funcion.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<float.h>
+	"funcion.h"
 
