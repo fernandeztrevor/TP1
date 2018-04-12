@@ -7,11 +7,30 @@
 float ingreso(void)
 {
     float numero;
+    int letra;
 
-    printf("Ingrese un valor: \n");
+    fflush(stdin);
+    printf("\nIngrese un valor numerico: \n");
     scanf("%f", &numero);
+    letra = isdigit(numero);
 
     return numero;
+}
+
+int validarIngreso(int flag1, int flag2, int validacionIN)
+{
+    //    int validacionIN;
+
+    if (flag1==0 || flag2==0)
+    {
+        validacionIN = 0;
+    }
+    else
+    {
+        validacionIN = 1;
+    }
+
+    return validacionIN;
 }
 
 float sumar (float op1, float op2)
@@ -20,19 +39,15 @@ float sumar (float op1, float op2)
     float resultado;
 
     resultado = op1 + op2;
-    printf("\nEl resultado de la suma es: %.2f\n", resultado);
-
 
     return resultado;
 }
-
 float restar(float op1, float op2)
 {
 
     float resultado;
 
     resultado= op1 - op2;
-    printf("\nEl resultado de la resta es: %.2f\n", resultado);
 
     return resultado;
 }
@@ -48,8 +63,6 @@ float dividir(float op1, float op2)
     }
     resultado=op1/op2;
 
-    printf("\nEl resultado de la división es: %.2f\n", resultado);
-
     return resultado;
 }
 float multiplicar(float op1, float op2)
@@ -58,7 +71,6 @@ float multiplicar(float op1, float op2)
     float resultado;
 
     resultado=op1*op2;
-    printf("\nEl resultado de la multiplicación es: %.2f\n", resultado);
 
     return resultado;
 }
@@ -73,11 +85,8 @@ for (i=1;i<=op1;i++)
 {
     fact=fact*i;
 }
-printf("El resultado corresponde al primer número ingresado");
-printf("\nEl factorial del numero es: %d\n", fact);
 
-
-return resultado;
+return fact;
 }
 
 float todos(float op1, float op2)
