@@ -12,14 +12,14 @@ float ingreso(void)
     fflush(stdin);
     printf("\nIngrese un valor numerico: \n");
     scanf("%f", &numero);
-    letra = isdigit(numero);
+
 
     return numero;
 }
 
 int validarIngreso(int flag1, int flag2, int validacionIN)
 {
-    //    int validacionIN;
+
 
     if (flag1==0 || flag2==0)
     {
